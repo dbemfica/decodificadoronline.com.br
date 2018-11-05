@@ -1,3 +1,9 @@
 function base64(string){
-  return window.atob(string);
+  try {
+    return window.atob(string);
+  }
+  catch (e) {
+
+  }
+
 }
