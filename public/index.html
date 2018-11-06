@@ -28,9 +28,6 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#lorem">Lorem Ipsum</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#sobre">Sobre</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
@@ -64,7 +61,12 @@
           </div>
         </div>
         <div class="row">
-          <div id="processos" class="text-center d-none">Descriptografando .... <span id="numero_processo">1</span>/<span id="total_processos"></span></div>
+          <div class="col-md-12 col-sm-12">
+            <div id="processos" class="text-center d-none" style="font-size: 20pt;">
+              <i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20pt;"></i>
+              Descriptografando <span id="numero_processo">1</span>/<span id="total_processos"></span>
+            </div>
+          </div>
           <div class="col-md-12 col-sm-12">
             <table id="table-result" class="table table-striped d-none" width="300" cellspacing="0" cellpadding="2" align="center">
               <tbody>
@@ -75,80 +77,26 @@
       </div>
     </header>
 
-    <!-- Lorem Ipsum -->
-    <section class="description" id="lorem">
+    <!-- Sobre -->
+    <section class="description" id="sobre">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary">Lorem Ipsum</h2>
+        <h2 class="text-center text-uppercase text-secondary">Sobre</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-md-12 col-lg-12">
-            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+            <p>O Decodificador Online é uma ferramenta vai passar a sua string por diversos processos de descriptografia. É ideal para aqueles que encontram um hash mas não sabem de qual que se trata. Os resultados de todos os processos vão ser listados e cabe ao usuário em identificar qual resultado faz mais sentido.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre Section -->
-    <section class="bg-primary text-white mb-0" id="sobre">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">Sobre</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-          <div class="col-lg-12 ml-auto">
-            <p class="lead">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato Section -->
-    <section id="contato">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contato</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Nome</label>
-                  <input class="form-control" id="name" type="text" placeholder="Nome" required="required">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>E-mail</label>
-                  <input class="form-control" id="email" type="email" placeholder="E-mail" required="required">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Messagem</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Messagem" required="required"></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Enviar</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer class="copyright py-4 text-center text-white">
       <p>
         <a href="index.html#sobre" style="color: #fff;">Sobre</a>
         -
         <a href="politicas-de-privacidade.html" style="color: #fff;">Políticas de Privacidade</a>
         -
-        <a href="index.html#contato" style="color: #fff;">Contato</a>
+        <a href="contato.html" style="color: #fff;">Contato</a>
       </p>
       <small>Copyright &copy; Diogo Bemfica 2018</small>
     </footer>
