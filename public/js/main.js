@@ -33,17 +33,19 @@ async function main(input, tentativas) {
 
   await sleep(2000);
 
-  for(let i = 0; i < tentativas; i++){
+  let x = 0;
+  for(let i = 1; i <= tentativas; i++){
 
-    numero_processo.innerHTML = i+2;
-    row = table.insertRow(i+1);
+    numero_processo.innerHTML = x+2;
+    row = table.insertRow(x+1);
     cell1 = row.insertCell(0);
     cell2 = row.insertCell(1);
 
-    cell1.innerHTML = "Cifra de César ("+(i+1)+"):";
+    cell1.innerHTML = "Cifra de César ("+(i)+"):";
     cell2.innerHTML = cifraCesar(input,i);
 
     await sleep(2000);
+    x++;
   }
   processos.classList.add('d-none');
 }
