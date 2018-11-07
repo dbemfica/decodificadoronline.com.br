@@ -3,6 +3,7 @@ var table = document.getElementById('table-result');
 var numero_processo = document.getElementById('numero_processo');
 var total_processos = document.getElementById('total_processos');
 
+//EVENTO DE CLICK DO BOTAO DECODIFICAR
 document.getElementById("btnDecodificar").addEventListener("click", function(){
   let input = document.getElementById('input').value;
   let tentativas = parseInt(document.getElementById('tentativas').value);
@@ -13,19 +14,22 @@ document.getElementById("btnDecodificar").addEventListener("click", function(){
 });
 
 
+//FUNCAO PARA CRIAR UM SLEEP PARA A ANINACAO DE DECODIFICANDO
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//FUNÇÃO USADA PARA CHAMAR AS OUTRAS FUNCOES DECODIFICADORAS
 async function main(input, tentativas) {
 
+  //INICIA AS VARIAVIES DO DOM
   processos.classList.remove('d-none');
   numero_processo.innerHTML = 1;
   total_processos.innerHTML = 3 + tentativas;
 
   table.classList.remove('d-none');
 
-  //base64
+  //MANIPUACAO DO DOM MAIS EXECULTAR A FUNCAO base64
   let row = table.insertRow(0);
   let cell1 = row.insertCell(0);
   let cell2 = row.insertCell(1);
@@ -35,7 +39,7 @@ async function main(input, tentativas) {
 
   await sleep(2000);
 
-  //reverse
+  //MANIPUACAO DO DOM MAIS EXECULTAR A FUNCAO reverse
   row = table.insertRow(1);
   cell1 = row.insertCell(0);
   cell2 = row.insertCell(1);
@@ -45,7 +49,7 @@ async function main(input, tentativas) {
 
   await sleep(2000);
 
-  //base64 + reverse
+  //MANIPUACAO DO DOM MAIS EXECULTAR A FUNCAO base64 + reverse
   row = table.insertRow(2);
   cell1 = row.insertCell(0);
   cell2 = row.insertCell(1);
@@ -55,6 +59,7 @@ async function main(input, tentativas) {
 
   await sleep(2000);
 
+  //MANIPUACAO DO DOM MAIS EXECULTAR A FUNCAO cifraCesar COM AS TENTATIVAS
   let x = 0;
   for(let i = 1; i <= tentativas; i++){
 
